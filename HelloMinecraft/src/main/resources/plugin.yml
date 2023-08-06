@@ -1,0 +1,7 @@
+name: HelloMinecraft
+version: 1.0
+main: dns.mods.HelloMinecraft
+
+commands:
+  hello:
+    description: Say hello Diego!

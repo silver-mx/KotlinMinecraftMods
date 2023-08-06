@@ -1,0 +1,13 @@
+name: AboutMePlugin
+version: 1.1
+main: dns.mods.AboutMePlugin
+
+commands:
+  myname:
+    description: Says my name
+  mystats:
+    description: Shows health and food levels
+  heal:
+    description: Heal yourself!
+  vacio:
+    description: Reduce energy
