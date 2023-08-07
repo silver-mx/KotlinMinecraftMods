@@ -9,5 +9,21 @@ commands:
     description: Shows health and food levels
   heal:
     description: Heal yourself!
+  mylocation:
+    description: Shows my location
+  jump:
+    description: Jump!
+  fast-speed:
+    description: Fast walkspeed!
+  normal-speed:
+    description: Normal walkspeed!
+  slow-speed:
+    description: Slow walkspeed!
+  level-up:
+    description: Level up!
+  level-down:
+    description: Level down!
+  fire-ticks:
+    description: Fire ticks
   vacio:
     description: Reduce energy
