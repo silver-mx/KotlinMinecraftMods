@@ -53,9 +53,11 @@ class AboutMePlugin : JavaPlugin() {
         return true
       }
 
-      "fast-speed" -> {
+      "faster-speed" -> {
         logger.info("Before walkspeed=${sender.walkSpeed}")
-        sender.walkSpeed = 1f
+        if (sender.walkSpeed + 0.2f <= 1.0f) {
+          sender.walkSpeed += 0.2f
+        }
         logger.info("After walkspeed=${sender.walkSpeed}")
         return true
       }
@@ -67,9 +69,11 @@ class AboutMePlugin : JavaPlugin() {
         return true
       }
 
-      "slow-speed" -> {
+      "slower-speed" -> {
         logger.info("Before walkspeed=${sender.walkSpeed}")
-        sender.walkSpeed = -1f
+        if (sender.walkSpeed - 0.2f >= -1f) {
+          sender.walkSpeed -= 0.2f
+        }
         logger.info("After walkspeed=${sender.walkSpeed}")
         return true
       }
