@@ -1,0 +1,8 @@
+name: OurWorldPlugin
+main: dns.mods.OurWorldPlugin
+version: 1.0
+
+commands:
+  onblock:
+    description: Shows the type of block you're standing on
+    usage: /onblock [new block type]
