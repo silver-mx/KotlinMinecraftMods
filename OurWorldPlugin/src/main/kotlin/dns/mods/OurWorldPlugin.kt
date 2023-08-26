@@ -5,7 +5,6 @@ import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 import org.bukkit.plugin.java.JavaPlugin
-import java.lang.IllegalArgumentException
 
 class OurWorldPlugin : JavaPlugin() {
 
@@ -28,6 +27,26 @@ class OurWorldPlugin : JavaPlugin() {
 
         sender.sendMessage("You are standing on ${block.type}")
 
+        return true
+      }
+
+      "seeblock" -> {
+        val targetBlock = sender.getTargetBlock(null, 100)
+        sender.sendMessage("Looking at ${targetBlock.type}")
+        return true
+      }
+
+      "lightning" -> {
+        val targetBlock = sender.getTargetBlock(null, 100)
+        sender.world.strikeLightning(targetBlock.location)
+        return true
+      }
+
+      "explosion" -> {
+        val targetBlock = sender.getTargetBlock(null, 100)
+        val explosionSize = if (args.isNotEmpty()) args.first().toFloat() else 1.0f
+        sender.sendMessage("Explosion size is $explosionSize")
+        sender.world.createExplosion(targetBlock.location, explosionSize)
         return true
       }
     }

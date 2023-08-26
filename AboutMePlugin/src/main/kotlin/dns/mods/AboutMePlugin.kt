@@ -1,8 +1,10 @@
 package dns.mods
 
+import org.bukkit.Material
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
+import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
 
 class AboutMePlugin : JavaPlugin() {
@@ -31,6 +33,16 @@ class AboutMePlugin : JavaPlugin() {
         sender.foodLevel = 20
         sender.sendMessage("Tienes energia llena!!")
         return true
+      }
+
+      "armor" -> {
+        sender.inventory.helmet = ItemStack(Material.DIAMOND_HELMET)
+        sender.inventory.boots = ItemStack(Material.GOLDEN_BOOTS)
+        sender.inventory.chestplate = ItemStack(Material.IRON_CHESTPLATE)
+        sender.inventory.leggings = ItemStack(Material.NETHERITE_LEGGINGS)
+
+        val sword = ItemStack(Material.NETHERITE_SWORD)
+        sender.inventory.addItem(sword)
       }
 
       "vacio" -> {

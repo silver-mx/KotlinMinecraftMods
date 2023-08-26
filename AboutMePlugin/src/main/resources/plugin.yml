@@ -27,3 +27,5 @@ commands:
     description: Fire ticks
   vacio:
     description: Reduce energy
+  armor:
+    description: Add super armor!

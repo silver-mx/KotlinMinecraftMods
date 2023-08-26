@@ -1,0 +1,9 @@
+  name: MobsPlugin
+  version: 1.0
+  main: dns.mods.MobsPlugin
+
+  commands:
+    mycat:
+      description: Spawn a cat!
+    myskeleton:
+      description: Spawn an skeleton!

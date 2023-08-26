@@ -12,6 +12,16 @@
           </config>
         </ContributedStateBase>
       </target>
+      <target name="WSL2" type="wsl" uuid="0a970eae-da76-4b39-bf36-1062e184eeec">
+        <config>
+          <option name="distributionMsId" value="Ubuntu" />
+        </config>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="homePath" value="/home/diego/.sdkman/candidates/java/17.0.8-tem" />
+          </config>
+        </ContributedStateBase>
+      </target>
     </targets>
   </component>
 </project>
