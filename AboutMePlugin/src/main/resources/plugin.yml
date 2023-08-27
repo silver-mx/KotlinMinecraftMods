@@ -13,11 +13,11 @@ commands:
     description: Shows my location
   jump:
     description: Jump!
-  fast-speed:
+  faster-speed:
     description: Fast walkspeed!
   normal-speed:
     description: Normal walkspeed!
-  slow-speed:
+  slower-speed:
     description: Slow walkspeed!
   level-up:
     description: Level up!
@@ -29,3 +29,9 @@ commands:
     description: Reduce energy
   armor:
     description: Add super armor!
+  hearts:
+    description: Add hearts
+    usage: /hearts [num hearts]
+  absortion:
+    description: Set absortion
+    usage: /absortion [num hearts]
