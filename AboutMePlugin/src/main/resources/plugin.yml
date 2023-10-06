@@ -35,3 +35,6 @@ commands:
   absortion:
     description: Set absortion
     usage: /absortion [num hearts]
+  deathloc:
+    description: Go to previous death location
+    usage: /deathloc
