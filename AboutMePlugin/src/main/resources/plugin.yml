@@ -33,6 +33,9 @@ commands:
   hearts:
     description: Add hearts
     usage: /hearts [num hearts]
+  hunger:
+    description: Set food level
+    usage: /hunger [food level]
   absortion:
     description: Set absortion
     usage: /absortion [num hearts]

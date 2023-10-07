@@ -10,6 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin
 import java.util.*
 import java.util.Objects.nonNull
 
+
 class AboutMePlugin : JavaPlugin() {
 
   override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
@@ -50,16 +51,23 @@ class AboutMePlugin : JavaPlugin() {
       }
 
       "hearts" -> {
-        val numHearts = args.first().toDouble() * 2
+        val numHearts = if (args.isNotEmpty()) args.first().toDouble() * 2 else 2.0
         val attribute = sender.getAttribute(GENERIC_MAX_HEALTH)
         attribute?.baseValue = numHearts
 
         return true
       }
 
+      "hunger" -> {
+        val num = if (args.isNotEmpty()) args.first().toInt() else 20
+        sender.foodLevel = num
+
+        return true
+      }
+
       "absortion" -> {
         try {
-          val absortionHearts = args.first().toDouble() * 2
+          val absortionHearts = if (args.isNotEmpty()) args.first().trim().toDouble() * 2 else 2.0
           sender.absorptionAmount = absortionHearts
         } catch (e: Exception) {
           logger.severe("Error executing absortion command: ${e.message}")
@@ -132,7 +140,6 @@ class AboutMePlugin : JavaPlugin() {
         if (nonNull(sender.lastDeathLocation)) {
           sender.teleport(sender.lastDeathLocation!!)
         }
-
         return true
       }
     }

@@ -13,3 +13,5 @@ commands:
   explosion:
     description: Create an explosion
     usage: /explosion [explosion size]
+  enemyfire:
+    description: Set enemies on fire

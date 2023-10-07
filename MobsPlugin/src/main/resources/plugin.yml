@@ -7,3 +7,10 @@
       description: Spawn a cat!
     myskeleton:
       description: Spawn an skeleton!
+      usage: /myskeleton [num skeletons]
+    mydogs:
+      description: Spawn n dogs!
+      usage: /mydogs [num dogs]
+    killmydogs:
+      description: Kill n dogs!
+      usage: /killmydogs [num dogs]
