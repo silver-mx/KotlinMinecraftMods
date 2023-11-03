@@ -1,6 +1,7 @@
 name: HelloMinecraft
 version: 1.0
 main: dns.mods.HelloMinecraft
+api-version: '1.13'
 
 commands:
   hello:

@@ -1,8 +1,13 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="MobsPlugin:jar">
-    <output-path>/mnt/c/Users/diego/sw/minecraft-server/plugins/</output-path>
+  <artifact type="jar" name="MobsPlugin:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MobsPlugin_jar</output-path>
     <root id="archive" name="MobsPlugin.jar">
       <element id="module-output" name="MobsPlugin" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.0/kotlin-stdlib-common-1.9.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.9.0/kotlin-stdlib-jdk7-1.9.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.9.0/kotlin-stdlib-1.9.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.0/kotlin-stdlib-jdk8-1.9.0.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

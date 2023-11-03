@@ -1,6 +1,7 @@
 name: OurWorldPlugin
 main: dns.mods.OurWorldPlugin
 version: 1.2
+api-version: '1.13'
 
 commands:
   onblock:
