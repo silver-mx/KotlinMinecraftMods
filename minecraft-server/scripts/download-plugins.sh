@@ -1,7 +1,7 @@
-#! /usr/bin/bash
+#!/usr/bin/bash
 
-WORKING_DIR=$(cd $(dirname $0) && pwd)
-PLUGINS_DIR=$WORKING_DIR/plugins
+WORKING_DIR=$1
+PLUGINS_DIR="$WORKING_DIR"/plugins
 
 if [ ! -d "$PLUGINS_DIR" ]; then
   mkdir -p "$PLUGINS_DIR"

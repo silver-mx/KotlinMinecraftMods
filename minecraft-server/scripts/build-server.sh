@@ -1,11 +1,11 @@
-#! /usr/bin/bash
+#!/usr/bin/bash
 
-TMP_FOLDER=build-tmp
-BUILD_TOOL=BuildTools.jar
-WORKING_DIR=$(cd $(dirname $0) && pwd)
+WORKING_DIR=$1
+BUILD_TOOL="BuildTools.jar"
+TMP_FOLDER="$WORKING_DIR"/build-tmp
 
 function exitIfError() {
-    if [ $? -ne 0 ]; then
+    if [ "$?" -ne 0 ]; then
         exit 1
     fi
 }
@@ -13,11 +13,11 @@ function exitIfError() {
 echo "Working dir $WORKING_DIR"
 
 # First delete the tmp folder if it exists
-test $TMP_FOLDER && rm -rf $TMP_FOLDER
+test "$TMP_FOLDER" && rm -rf "$TMP_FOLDER"
 
 # Create it again
-mkdir $TMP_FOLDER && cd $TMP_FOLDER
-test $TMP_FOLDER
+mkdir "$TMP_FOLDER" && cd "$TMP_FOLDER" || exit
+test "$TMP_FOLDER"
 
 exitIfError
 
@@ -32,13 +32,13 @@ exitIfError
 # Copy built artifact to parent folder and create a simlink to current version
 JAR_FILE="$(ls spigot-*)"
 SYMLINK_FILE=$WORKING_DIR/spigot-current.jar
-cp $JAR_FILE $WORKING_DIR
-rm $SYMLINK_FILE
-ln -s $WORKING_DIR/$JAR_FILE $SYMLINK_FILE
+cp "$JAR_FILE" "$WORKING_DIR"
+rm "$SYMLINK_FILE"
+ln -s "$WORKING_DIR"/"$JAR_FILE" "$SYMLINK_FILE"
 
 exitIfError
 
 # Clean up the tmp folder
-cd $WORKING_DIR
-rm -rf $TMP_FOLDER
+cd "$WORKING_DIR" || exit
+rm -rf "$TMP_FOLDER"
 
