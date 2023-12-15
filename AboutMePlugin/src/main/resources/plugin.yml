@@ -36,9 +36,9 @@ commands:
   hunger:
     description: Set food level
     usage: /hunger [food level]
-  absortion:
-    description: Set absortion
-    usage: /absortion [num hearts]
+  absorption:
+    description: Set absorption
+    usage: /absorption [num hearts]
   deathloc:
     description: Go to previous death location
     usage: /deathloc

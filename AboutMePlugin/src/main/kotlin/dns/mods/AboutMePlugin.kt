@@ -65,7 +65,7 @@ class AboutMePlugin : JavaPlugin() {
         return true
       }
 
-      "absortion" -> {
+      "absorption" -> {
         try {
           val absortionHearts = if (args.isNotEmpty()) args.first().trim().toDouble() * 2 else 2.0
           sender.absorptionAmount = absortionHearts
