@@ -13,11 +13,11 @@ function exitIfError() {
 echo "Working dir $WORKING_DIR"
 
 # First delete the tmp folder if it exists
-test "$TMP_FOLDER" && rm -rf "$TMP_FOLDER"
+test -e "$TMP_FOLDER" && rm -rf "$TMP_FOLDER"
 
 # Create it again
 mkdir "$TMP_FOLDER" && cd "$TMP_FOLDER" || exit
-test "$TMP_FOLDER"
+test -e "$TMP_FOLDER"
 
 exitIfError
 
